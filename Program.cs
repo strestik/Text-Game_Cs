@@ -13,21 +13,24 @@ namespace Console__game
             try
             {
                 Console.Write("Enter your character's name : ");
-                string name = Console.ReadLine();
-                Character Hero = new Character(name);
-                //Console.WriteLine($"Character Created: {hero.Name}");
-                //Console.WriteLine($"HP: {hero.HP}, Stamina: {hero.Stamina}, Mana: {hero.Mana}, Defense: {hero.Defense}, Skill: {hero.Skill}, Level: {hero.Level}, Experience: {hero.Experience}/{hero.ExperienceToNextLevel}");
-                welcoming(Hero);
-                loreDrop_1();
+                string input = Console.ReadLine();
+                Console.WriteLine();
+                Character Hero = new Character(input);                              // Create the hero character with the provided name
+
+                // // Welcoming the player and introducing the game world
+                // welcoming(Hero);
+
+                // // Starting lore drop, first encounter and proposition of lore
+                // loreDrop_0();
+
+                // // Proces of choosing character class, states specific stats and abilities of each class, and then choosing the class
+                characterChoosingProcess(Hero);
+                
+                // // Introdusing stats, abbilities and equpment
             }
             catch (ArgumentException ex)
             {
-                Console.ForegroundColor = ConsoleColor.DarkRed;      // color DarkRed text
-                Console.Write($"Exception:");
-                Console.ForegroundColor = ConsoleColor.Red;         // color red text
-                Console.WriteLine($" {ex.Message}\n");
-                Console.ResetColor();                              // reset to default color
-                Thread.Sleep(2000);
+                configErrorMessage("Exception:", ex.Message);
                 goto Start;
             }
 

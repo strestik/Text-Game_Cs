@@ -6,21 +6,22 @@ namespace Console__game
 {
     internal class Character
     {
-        public string Name { get; private set; }
+        public string Name { get; private set; } = "Unknown";
         public bool IsAlive { get; private set; } = true;
-        public int HP { get; private set; }
-        public int Stamina { get; private set; }
-        public int Mana { get; private set; }
-        public int Defense { get; private set; }
-        public double Skill { get; private set; } // AttackMultiplier
-        public int Respect { get; private set; }
-        public int Level { get; private set; } = 1;                                // new idea of leveling system
-        public int Experience { get; private set; } = 0;                           // new idea of leveling system
-        public int ExperienceToNextLevel { get; private set; } = 100;              // new idea of leveling system
-        public Dictionary<string, EffectStatus> Effects { get; private set; }
-        public Dictionary<string, EquipStatus> Equip { get; private set; }
+        public int HP { get; protected set; }
+        public int Stamina { get; protected set; }
+        public int Mana { get; protected set; }
+        public int Defense { get; protected set; }
+        public double Skill { get; protected set; } // AttackMultiplier
+        public int Respect { get; protected set; }
+        public int Level { get; protected set; } = 1;                                // new idea of leveling system
+        public int Experience { get; protected set; } = 0;                           // new idea of leveling system
+        public int ExperienceToNextLevel { get; protected set; } = 100;              // new idea of leveling system
+        public Dictionary<string, EffectStatus> Effects { get; protected set; }
+        public Dictionary<string, EquipStatus> Equip { get; protected set; }
 
 
+        
         public sealed class EffectStatus
         {
             public bool Is { get; set; }
@@ -37,8 +38,8 @@ namespace Console__game
         {
             public bool Own { get; set; }
             public int Dmg { get; set; }
-            public string ? Effect { get; set; }
-            public EquipStatus(int dmg, string effect, bool own = false)
+            public string Effect { get; set; }
+            public EquipStatus(int dmg = 0, bool own = false, string effect = "none")
             {
                 Own = own;
                 Effect = effect;
@@ -83,7 +84,7 @@ namespace Console__game
             { 
                 throw new ArgumentException("Parameter must not be null, empty or whitespace."); 
             }
-            this.IsAlive = true;
+            // this.IsAlive = true;
             this.Name = name;
             this.HP = 100;
             this.Stamina = 100;
@@ -108,14 +109,11 @@ namespace Console__game
             };
             this.Equip = new Dictionary<string, EquipStatus>(StringComparer.OrdinalIgnoreCase)
             {
-                ["bomb"] = new EquipStatus(60, null, true),
-                ["poison bomb"] = new EquipStatus(50, "poisoned", true),
-                ["fire bomb"] = new EquipStatus(50, "burning", true),
-                ["frost bomb"] = new EquipStatus(50, "frozen", true)
+                ["bomb"] = new EquipStatus(60, true),
+                ["poison bomb"] = new EquipStatus(50, true, "poisoned"),
+                ["fire bomb"] = new EquipStatus(50, true, "burning"),
+                ["frost bomb"] = new EquipStatus(50, true, "frozen")
             };
         }
-
-
-
     }
 }

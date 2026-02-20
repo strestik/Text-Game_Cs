@@ -1,5 +1,5 @@
 ```
-Heroic story under construction.</br>
+Heroic story under construction.
                /\
               //\\
              //__\\
@@ -41,7 +41,6 @@ Heroic story under construction.</br>
           ____-\/-____
               -__-
              /    \
-´´´
 
 
 

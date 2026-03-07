@@ -141,11 +141,13 @@ namespace Console__game
                             break;
                         default:
                             configErrorMessage("Invalid choice:", " Please try again.");
+                            Console.Clear();
                     }
                 }
                 catch (ArgumentException ex)
                 {
                     configErrorMessage("Exception:", ex.Message);
+                    Console.Clear();
                 }
             }
         }

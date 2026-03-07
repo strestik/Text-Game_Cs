@@ -32,6 +32,7 @@ namespace Console__game
                 catch (Exception ex)
                 {
                     ConfigErrorMessage("Exception: ", ex.Message);
+                    Console.Write("\f\u001bc\x1b[3J");
                 }
             }
 

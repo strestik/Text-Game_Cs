@@ -86,67 +86,67 @@ namespace Console__game
 
         public static void characterChoosingProcess(Character h)
         {
-            choose:
-            try
+            while (true)
             {
-                Console.WriteLine($"What house of craft thy art in ? : ");
-                Console.WriteLine($"/ 1 / Witcher");
-                Console.WriteLine($"/ 2 / Sorcerer");
-                Console.WriteLine($"/ 3 / Archer");
-                Console.WriteLine($"/ 4 / Jarl");
-                Console.WriteLine($"/ 5 / Bard");
-                Console.WriteLine($"/ 6 / Monster");
-                Console.WriteLine($"/ 7 / Dwarf");
-                Console.Write("\n'Enter the number of your choice' : ");
-
-                string choice = Console.ReadLine();
-                Console.WriteLine();
-                switch (choice.ToLower())
+                try
                 {
-                    case "1":
-                        Console.WriteLine($"You have chosen the path of the Witcher!");
-                        Witcher witcher = new Witcher(h.Name);
-                        characterInfo(witcher);
-                        break;
-                    case "2":
-                        Console.WriteLine($"You have chosen the path of the Sorcerer!");
-                        Sorcerer sorcerer = new Sorcerer(h.Name);
-                        characterInfo(sorcerer);
-                        break;
-                    case "3":
-                        Console.WriteLine($"You have chosen the path of the Archer!");
-                        Archer archer = new Archer(h.Name);
-                        characterInfo(archer);
-                        break;
-                    case "4":
-                        Console.WriteLine($"You have chosen the path of the Jarl!");
-                        Jarl jarl = new Jarl(h.Name);
-                        characterInfo(jarl);
-                        break;
-                    case "5":
-                        Console.WriteLine($"You have chosen the path of the Bard!");
-                        Bard bard = new Bard(h.Name);
-                        characterInfo(bard);
-                        break;
-                    case "6":
-                        Console.WriteLine($"You have chosen the path of the Monster!");
-                        Monster monster = new Monster(h.Name);
-                        characterInfo(monster);
-                        break;
-                    case "7":
-                        Console.WriteLine($"You have chosen the path of the Dwarf!");
-                        Dwarf dwarf = new Dwarf(h.Name);
-                        characterInfo(dwarf);
-                        break;
-                    default:
-                        configErrorMessage("Invalid choice:", " Please try again.");
-                        goto choose;
+                    Console.WriteLine($"What house of craft thy art in ? : ");
+                    Console.WriteLine($"/ 1 / Witcher");
+                    Console.WriteLine($"/ 2 / Sorcerer");
+                    Console.WriteLine($"/ 3 / Archer");
+                    Console.WriteLine($"/ 4 / Jarl");
+                    Console.WriteLine($"/ 5 / Bard");
+                    Console.WriteLine($"/ 6 / Monster");
+                    Console.WriteLine($"/ 7 / Dwarf");
+                    Console.Write("\n'Enter the number of your choice' : ");
+
+                    string choice = Console.ReadLine();
+                    Console.WriteLine();
+                    switch (choice.ToLower())
+                    {
+                        case "1":
+                            Console.WriteLine($"You have chosen the path of the Witcher!");
+                            Witcher witcher = new Witcher(h.Name);
+                            characterInfo(witcher);
+                            break;
+                        case "2":
+                            Console.WriteLine($"You have chosen the path of the Sorcerer!");
+                            Sorcerer sorcerer = new Sorcerer(h.Name);
+                            characterInfo(sorcerer);
+                            break;
+                        case "3":
+                            Console.WriteLine($"You have chosen the path of the Archer!");
+                            Archer archer = new Archer(h.Name);
+                            characterInfo(archer);
+                            break;
+                        case "4":
+                            Console.WriteLine($"You have chosen the path of the Jarl!");
+                            Jarl jarl = new Jarl(h.Name);
+                            characterInfo(jarl);
+                            break;
+                        case "5":
+                            Console.WriteLine($"You have chosen the path of the Bard!");
+                            Bard bard = new Bard(h.Name);
+                            characterInfo(bard);
+                            break;
+                        case "6":
+                            Console.WriteLine($"You have chosen the path of the Monster!");
+                            Monster monster = new Monster(h.Name);
+                            characterInfo(monster);
+                            break;
+                        case "7":
+                            Console.WriteLine($"You have chosen the path of the Dwarf!");
+                            Dwarf dwarf = new Dwarf(h.Name);
+                            characterInfo(dwarf);
+                            break;
+                        default:
+                            configErrorMessage("Invalid choice:", " Please try again.");
+                    }
                 }
-            }
-            catch (ArgumentException ex)
-            {
-                configErrorMessage("Exception:", ex.Message);
-                goto choose;
+                catch (ArgumentException ex)
+                {
+                    configErrorMessage("Exception:", ex.Message);
+                }
             }
         }
     }

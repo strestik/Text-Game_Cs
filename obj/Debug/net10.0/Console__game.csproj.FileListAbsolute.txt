@@ -26,3 +26,4 @@ C:\Users\Admin\source\repos\strestik\Text-Game_Cs\obj\Debug\net10.0\refint\Conso
 C:\Users\Admin\source\repos\strestik\Text-Game_Cs\obj\Debug\net10.0\Console__game.pdb
 C:\Users\Admin\source\repos\strestik\Text-Game_Cs\obj\Debug\net10.0\Console__game.genruntimeconfig.cache
 C:\Users\Admin\source\repos\strestik\Text-Game_Cs\obj\Debug\net10.0\ref\Console__game.dll
+C:\Users\Admin\source\repos\strestik\Text-Game_Cs\obj\Debug\net10.0\Console__game.sourcelink.json

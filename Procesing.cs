@@ -142,6 +142,7 @@ namespace Console__game
                         default:
                             configErrorMessage("Invalid choice:", " Please try again.");
                             Console.Clear();
+                            break;
                     }
                 }
                 catch (ArgumentException ex)

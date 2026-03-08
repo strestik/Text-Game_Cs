@@ -17,16 +17,23 @@ namespace Console__game
                     Console.WriteLine();
                     Character Hero = new Character(input);                              // Create the hero character with the provided name
 
-                    // // Welcoming the player and introducing the game world
-                    // welcoming(Hero);
+                    if (Processing.skip())
+                    {
+                        // // Welcoming the player and introducing the game world
+                        welcoming(Hero);
 
-                    // // Starting lore drop, first encounter and proposition of lore
-                    // loreDrop_0();
+                        // // Starting lore drop, first encounter and proposition of lore
+                        loreDrop_0();
+                    } // Text part
 
                     // // Proces of choosing character class, states specific stats and abilities of each class, and then choosing the class
                     characterChoosingProcess(Hero);
 
-                    // // Introdusing stats, abbilities and equpment
+                    // // Introdusing stats, abbilities and equpment , ascii art for difrent classes
+
+
+                    Character.Death();
+                    Thread.Sleep(5000);
                     break;
                 }
                 catch (Exception ex)

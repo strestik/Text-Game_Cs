@@ -19,9 +19,15 @@ namespace Console__game
         public int ExperienceToNextLevel { get; protected set; } = 100;              // new idea of leveling system
         public Dictionary<string, EffectStatus> Effects { get; protected set; }
         public Dictionary<string, EquipStatus> Equip { get; protected set; }
+        //public string deathASCII { get; private set; } = $"    ___o .--.\r\n   /___| |OO|\r\n  /'   |_|  |_\r\n       (_    _)\r\n       | |   \\\r\n       | |oo_/sjw\r\n";
 
 
-        
+        public static void Death()
+        {
+            Console.WriteLine($"    ___o .--.\r\n   /___| |OO|\r\n  /'   |_|  |_\r\n       (_    _)\r\n       | |   \\\r\n       | |   /   \r\n");
+            Console.WriteLine("You have died. Game over.");
+        }
+
         public sealed class EffectStatus
         {
             public bool Is { get; set; }

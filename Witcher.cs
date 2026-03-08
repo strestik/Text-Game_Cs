@@ -16,7 +16,7 @@ namespace Console__game
             this.Defense = 70;
             this.Skill = 1.5;
             this.ExperienceToNextLevel = 150; // Adjusted for Witcher leveling
-
+            //this.ASCII = 
         }
     }
 }

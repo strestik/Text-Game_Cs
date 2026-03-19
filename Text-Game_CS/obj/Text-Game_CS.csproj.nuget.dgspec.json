@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Admin\\source\\repos\\Text-Game_CS\\Text-Game_CS\\Text-Game_CS.csproj": {}
+    "C:\\Users\\Admin\\source\\repos\\Text-Game_Cs\\Text-Game_CS\\Text-Game_CS.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Admin\\source\\repos\\Text-Game_CS\\Text-Game_CS\\Text-Game_CS.csproj": {
+    "C:\\Users\\Admin\\source\\repos\\Text-Game_Cs\\Text-Game_CS\\Text-Game_CS.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Admin\\source\\repos\\Text-Game_CS\\Text-Game_CS\\Text-Game_CS.csproj",
+        "projectUniqueName": "C:\\Users\\Admin\\source\\repos\\Text-Game_Cs\\Text-Game_CS\\Text-Game_CS.csproj",
         "projectName": "Text-Game_CS",
-        "projectPath": "C:\\Users\\Admin\\source\\repos\\Text-Game_CS\\Text-Game_CS\\Text-Game_CS.csproj",
+        "projectPath": "C:\\Users\\Admin\\source\\repos\\Text-Game_Cs\\Text-Game_CS\\Text-Game_CS.csproj",
         "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Admin\\source\\repos\\Text-Game_CS\\Text-Game_CS\\obj\\",
+        "outputPath": "C:\\Users\\Admin\\source\\repos\\Text-Game_Cs\\Text-Game_CS\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",

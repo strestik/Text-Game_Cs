@@ -73,7 +73,7 @@ namespace Text_Game_CS
                 WriteWithDelay($"Thats a great name!!!!", charDelayMs: 80, 1500);
                 Thread.Sleep(1200);
                 Console.Clear();
-                WriteWithDelay($"Welcome thee valiant Hero. At last you are here! The World waited patiently for your arival.", charDelayMs: 80, 400);
+                WriteWithDelay($"Welcome thy valiant Hero. At last you are here! The World waited patiently for your arival.", charDelayMs: 80, 400);
                 WriteWithDelay($"Now when the day finaly come, we are unprepaired. We are sorry Hero. Enemy struck in our weak moment.", charDelayMs: 100, 600);
                 WriteWithDelay($"What? You ask what happed? Thats a long story, you know.", charDelayMs: 120, 600);
                 WriteWithDelay($"And Its always best to start ", charDelayMs: 140, 800, false);
@@ -97,13 +97,13 @@ namespace Text_Game_CS
             }
         }
 
-        public static void characterChoosingProcess(string name)
+        public static Character characterChoosingProcess(string name)
         {
             while (true)
             {
                 try
                 {
-                    Console.WriteLine($"What house of craft thy art in ? : ");
+                    Console.WriteLine($"What house of craft thy art in ? : \n");
                     Console.WriteLine($"/ 1 / Witcher");
                     Console.WriteLine($"/ 2 / Sorcerer");
                     Console.WriteLine($"/ 3 / Archer");
@@ -115,66 +115,100 @@ namespace Text_Game_CS
 
                     string choice = Console.ReadLine();
                     Console.WriteLine();
+
                     switch (choice.ToLower())
                     {
                         case "1":
-                            Console.WriteLine($"You have chosen the path of the Witcher!");
-                            Character Hero = new Witcher(name);
-                            //Witcher witcher = new Witcher(h.Name);
-                            characterInfo(Hero);
+                            Console.WriteLine($"Oh... I see, you have chosen the path of the Witcher!");
+                            Character witcher = new Witcher(name);
+
+                            characterInfo(witcher);
                             Console.WriteLine("\nPress any key to continue...\n");
                             Console.ReadKey();
                             Console.Clear();
+
+                            return witcher;
                             break;
+
+
                         case "2":
-                            Console.WriteLine($"You have chosen the path of the Sorcerer!");
-                            Character Hero = new Sorcerer(name);
-                            //Sorcerer sorcerer = new Sorcerer(h.Name);
-                            characterInfo(Hero);
+                            Console.WriteLine($"Oh... I see, you have chosen the path of the Sorcerer!");
+                            Character sorcerer = new Sorcerer(name);
+
+                            characterInfo(sorcerer);
                             Console.WriteLine("\nPress any key to continue...\n");
                             Console.ReadKey();
                             Console.Clear();
+
+                            return sorcerer;
                             break;
+
+
                         case "3":
-                            Console.WriteLine($"You have chosen the path of the Archer!");
-                            Archer archer = new Archer(h.Name);
+                            Console.WriteLine($"Oh... I see, you have chosen the path of the Archer!");
+                            Character archer = new Archer(name);
+
                             characterInfo(archer);
                             Console.WriteLine("\nPress any key to continue...\n");
                             Console.ReadKey();
                             Console.Clear();
+
+                            return archer;
                             break;
+
+
                         case "4":
-                            Console.WriteLine($"You have chosen the path of the Jarl!");
-                            Jarl jarl = new Jarl(h.Name);
+                            Console.WriteLine($"Oh... I see, you have chosen the path of the Jarl!");
+                            Character jarl = new Jarl(name);
+
                             characterInfo(jarl);
                             Console.WriteLine("\nPress any key to continue...\n");
                             Console.ReadKey();
                             Console.Clear();
+
+                            return jarl;
                             break;
+
+
                         case "5":
-                            Console.WriteLine($"You have chosen the path of the Bard!");
-                            Bard bard = new Bard(h.Name);
+                            Console.WriteLine($"Oh... I see, you have chosen the path of the Bard!");
+                            Character bard = new Bard(name);
+
                             characterInfo(bard);
                             Console.WriteLine("\nPress any key to continue...\n");
                             Console.ReadKey();
                             Console.Clear();
+
+                            return bard;
                             break;
+
+
                         case "6":
-                            Console.WriteLine($"You have chosen the path of the Monster!");
-                            Monster monster = new Monster(h.Name);
+                            Console.WriteLine($"Oh... I see, you have chosen the path of the Monster!");
+                            Character monster = new Monster(name);
+
                             characterInfo(monster);
                             Console.WriteLine("\nPress any key to continue...\n");
                             Console.ReadKey();
                             Console.Clear();
+
+                            return monster;
                             break;
+
+
                         case "7":
-                            Console.WriteLine($"You have chosen the path of the Dwarf!");
-                            Dwarf dwarf = new Dwarf(h.Name);
+                            Console.WriteLine($"Oh... I see, you have chosen the path of the Dwarf!");
+                            Character dwarf = new Dwarf(name);
+
                             characterInfo(dwarf);
                             Console.WriteLine("\nPress any key to continue...\n");
                             Console.ReadKey();
                             Console.Clear();
+
+                            return dwarf;
                             break;
+
+
                         default:
                             configErrorMessage("Invalid choice:", " Please try again.");
                             Console.Clear();
@@ -188,6 +222,7 @@ namespace Text_Game_CS
                     Console.Clear();
                 }
             }
+            return null;
         }
     }
 }

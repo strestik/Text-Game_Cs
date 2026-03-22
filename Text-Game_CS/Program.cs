@@ -12,14 +12,17 @@ namespace Text_Game_CS
             {
                 try
                 {
+                    Console.WriteLine("___________________________");
                     Console.Write("Enter your character's name : ");
                     string input = Console.ReadLine();
                     Console.WriteLine();
-                    // // Proces of choosing character class, states specific stats and abilities of each class, and then choosing the class
-                    characterChoosingProcess(input);
-                    //Character Hero = new Character(input);                              // Create the hero character with the provided name
 
-                    Character Enemy = new Character("Enemy");                             // Create an enemy character for the first encounter
+                    // // Proces of choosing character class, states specific stats and abilities of each class, and then choosing the class
+
+
+                    Character Hero = characterChoosingProcess(input);                      // Create the hero character with the provided name
+
+                    //Character Enemy = new Character("Enemy");                             // Create an enemy character for the first encounter
 
                     if (Processing.skip())
                     {

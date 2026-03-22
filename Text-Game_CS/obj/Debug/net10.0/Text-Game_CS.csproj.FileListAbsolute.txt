@@ -12,3 +12,4 @@ C:\Users\Admin\source\repos\Text-Game_CS\Text-Game_CS\obj\Debug\net10.0\refint\T
 C:\Users\Admin\source\repos\Text-Game_CS\Text-Game_CS\obj\Debug\net10.0\Text-Game_CS.pdb
 C:\Users\Admin\source\repos\Text-Game_CS\Text-Game_CS\obj\Debug\net10.0\Text-Game_CS.genruntimeconfig.cache
 C:\Users\Admin\source\repos\Text-Game_CS\Text-Game_CS\obj\Debug\net10.0\ref\Text-Game_CS.dll
+C:\Users\Admin\source\repos\Text-Game_Cs\Text-Game_CS\obj\Debug\net10.0\Text-Game_CS.sourcelink.json

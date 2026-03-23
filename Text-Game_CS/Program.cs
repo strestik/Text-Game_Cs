@@ -12,15 +12,9 @@ namespace Text_Game_CS
             {
                 try
                 {
-                    Console.WriteLine("___________________________");
-                    Console.Write("Enter your character's name : ");
-                    string input = Console.ReadLine();
-                    Console.WriteLine();
-
                     // // Proces of choosing character class, states specific stats and abilities of each class, and then choosing the class
 
-
-                    Character Hero = characterChoosingProcess(input);                      // Create the hero character with the provided name
+                    Character Hero = characterChoosingProcess(enter());                      // Create the hero character with the provided name
 
                     //Character Enemy = new Character("Enemy");                             // Create an enemy character for the first encounter
 
@@ -38,7 +32,6 @@ namespace Text_Game_CS
 
 
                     Character.Death();
-                    Thread.Sleep(5000);
                     break;
                 }
                 catch (Exception ex)

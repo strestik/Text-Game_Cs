@@ -54,9 +54,18 @@ namespace Text_Game_CS
             if (Console.KeyAvailable && Console.ReadKey(intercept: true).Key == ConsoleKey.Enter) return false;
             return true;
         }
+        public static string enter()
+        {
+            Console.WriteLine("___________________________");
+            Console.Write("Enter your character's name : ");
+            string input = Console.ReadLine();
+            Console.WriteLine();
+            return input;
+        }
 
         public static void characterInfo(Character h)
         {
+            Console.Clear();
             Console.WriteLine($"\nHero {h.Name}, of powers:");
             Console.WriteLine($"HP: {h.HP}, Stamina: {h.Stamina}, Mana: {h.Mana}, Defense: {h.Defense}, Skill: {h.Skill}, Level: {h.Level}, Experience: {h.Experience}/{h.ExperienceToNextLevel}\n");
         }
@@ -103,6 +112,8 @@ namespace Text_Game_CS
             {
                 try
                 {
+                    Thread.Sleep(1000);
+                    Console.Clear();
                     Console.WriteLine($"What house of craft thy art in ? : \n");
                     Console.WriteLine($"/ 1 / Witcher");
                     Console.WriteLine($"/ 2 / Sorcerer");
@@ -121,11 +132,11 @@ namespace Text_Game_CS
                         case "1":
                             Console.WriteLine($"Oh... I see, you have chosen the path of the Witcher!");
                             Character witcher = new Witcher(name);
+                            Thread.Sleep(1500);
 
                             characterInfo(witcher);
                             Console.WriteLine("\nPress any key to continue...\n");
                             Console.ReadKey();
-                            Console.Clear();
 
                             return witcher;
                             break;
@@ -134,11 +145,11 @@ namespace Text_Game_CS
                         case "2":
                             Console.WriteLine($"Oh... I see, you have chosen the path of the Sorcerer!");
                             Character sorcerer = new Sorcerer(name);
+                            Thread.Sleep(1500);
 
                             characterInfo(sorcerer);
                             Console.WriteLine("\nPress any key to continue...\n");
                             Console.ReadKey();
-                            Console.Clear();
 
                             return sorcerer;
                             break;
@@ -147,11 +158,11 @@ namespace Text_Game_CS
                         case "3":
                             Console.WriteLine($"Oh... I see, you have chosen the path of the Archer!");
                             Character archer = new Archer(name);
+                            Thread.Sleep(1500);
 
                             characterInfo(archer);
                             Console.WriteLine("\nPress any key to continue...\n");
                             Console.ReadKey();
-                            Console.Clear();
 
                             return archer;
                             break;
@@ -160,11 +171,11 @@ namespace Text_Game_CS
                         case "4":
                             Console.WriteLine($"Oh... I see, you have chosen the path of the Jarl!");
                             Character jarl = new Jarl(name);
+                            Thread.Sleep(1500);
 
                             characterInfo(jarl);
                             Console.WriteLine("\nPress any key to continue...\n");
                             Console.ReadKey();
-                            Console.Clear();
 
                             return jarl;
                             break;
@@ -173,11 +184,11 @@ namespace Text_Game_CS
                         case "5":
                             Console.WriteLine($"Oh... I see, you have chosen the path of the Bard!");
                             Character bard = new Bard(name);
+                            Thread.Sleep(1500);
 
                             characterInfo(bard);
                             Console.WriteLine("\nPress any key to continue...\n");
                             Console.ReadKey();
-                            Console.Clear();
 
                             return bard;
                             break;
@@ -186,11 +197,11 @@ namespace Text_Game_CS
                         case "6":
                             Console.WriteLine($"Oh... I see, you have chosen the path of the Monster!");
                             Character monster = new Monster(name);
+                            Thread.Sleep(1500);
 
                             characterInfo(monster);
                             Console.WriteLine("\nPress any key to continue...\n");
                             Console.ReadKey();
-                            Console.Clear();
 
                             return monster;
                             break;
@@ -199,11 +210,11 @@ namespace Text_Game_CS
                         case "7":
                             Console.WriteLine($"Oh... I see, you have chosen the path of the Dwarf!");
                             Character dwarf = new Dwarf(name);
+                            Thread.Sleep(1500);
 
                             characterInfo(dwarf);
                             Console.WriteLine("\nPress any key to continue...\n");
                             Console.ReadKey();
-                            Console.Clear();
 
                             return dwarf;
                             break;
@@ -212,6 +223,7 @@ namespace Text_Game_CS
                         default:
                             configErrorMessage("Invalid choice:", " Please try again.");
                             Console.Clear();
+                            continue;
                             break;
                     }
                     break;
@@ -224,5 +236,6 @@ namespace Text_Game_CS
             }
             return null;
         }
+
     }
 }

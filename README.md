@@ -16,7 +16,7 @@ Heroic story under construction.
   /)         [|__|]        (\
  //\_________[|__|]________/\\
  ))__________||__||_________((
-<_/         [  \/  ] Krogg97\_>
+<_/         [  \/  ]        \_>
             || || ||
             || || ||
             || || ||
@@ -99,6 +99,6 @@ Heroic story under construction.
 
 
 
-
+Made by Krogg97
 This ASCII pic can be found at
 https://asciiart.website/art/3138

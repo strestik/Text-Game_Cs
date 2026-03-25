@@ -16,7 +16,7 @@ namespace Text_Game_CS
 
                     Character Hero = characterChoosingProcess(enter());                      // Create the hero character with the provided name
 
-                    //Character Enemy = new Character("Enemy");                             // Create an enemy character for the first encounter
+                    Character Enemy = enemyCharacterChoosingProcess();                             // Create an enemy character for the first encounter
 
                     if (Processing.skip())
                     {
@@ -32,6 +32,7 @@ namespace Text_Game_CS
 
 
                     Character.Death();
+                    Thread.Sleep(2000);
                     break;
                 }
                 catch (Exception ex)

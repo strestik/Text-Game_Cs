@@ -3,16 +3,44 @@
   "WorkspaceRootPath": "C:\\Users\\Admin\\source\\repos\\Text-Game_Cs\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{3B9D262E-EC4D-3282-E3F9-0AEDAE6E16F4}|Text-Game_CS\\Text-Game_CS.csproj|c:\\users\\admin\\source\\repos\\text-game_cs\\text-game_cs\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3B9D262E-EC4D-3282-E3F9-0AEDAE6E16F4}|Text-Game_CS\\Text-Game_CS.csproj|solutionrelative:text-game_cs\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Admin\\source\\repos\\Text-Game_Cs\\Text-Game_CS\\Program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Text-Game_CS\\Program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3B9D262E-EC4D-3282-E3F9-0AEDAE6E16F4}|Text-Game_CS\\Text-Game_CS.csproj|c:\\users\\admin\\source\\repos\\text-game_cs\\text-game_cs\\procesing.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3B9D262E-EC4D-3282-E3F9-0AEDAE6E16F4}|Text-Game_CS\\Text-Game_CS.csproj|solutionrelative:text-game_cs\\procesing.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Admin\\source\\repos\\Text-Game_Cs\\Text-Game_CS\\Archer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Text-Game_CS\\Archer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3B9D262E-EC4D-3282-E3F9-0AEDAE6E16F4}|Text-Game_CS\\Text-Game_CS.csproj|c:\\users\\admin\\source\\repos\\text-game_cs\\text-game_cs\\witcher.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3B9D262E-EC4D-3282-E3F9-0AEDAE6E16F4}|Text-Game_CS\\Text-Game_CS.csproj|solutionrelative:text-game_cs\\witcher.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Admin\\source\\repos\\Text-Game_Cs\\Text-Game_CS\\Bard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Text-Game_CS\\Bard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Admin\\source\\repos\\Text-Game_Cs\\Text-Game_CS\\Dwarf.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Text-Game_CS\\Dwarf.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Admin\\source\\repos\\Text-Game_Cs\\Text-Game_CS\\Jarl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Text-Game_CS\\Jarl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Admin\\source\\repos\\Text-Game_Cs\\Text-Game_CS\\Monster.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Text-Game_CS\\Monster.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Admin\\source\\repos\\Text-Game_Cs\\Text-Game_CS\\Sorcerer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Text-Game_CS\\Sorcerer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Admin\\source\\repos\\Text-Game_Cs\\Text-Game_CS\\Witcher.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Text-Game_CS\\Witcher.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Admin\\source\\repos\\Text-Game_Cs\\Text-Game_CS\\Special_attacks.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Text-Game_CS\\Special_attacks.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Admin\\source\\repos\\Text-Game_Cs\\Text-Game_CS\\Procesing.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Text-Game_CS\\Procesing.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -32,7 +60,7 @@
               "RelativeDocumentMoniker": "Text-Game_CS\\Program.cs",
               "ToolTip": "C:\\Users\\Admin\\source\\repos\\Text-Game_Cs\\Text-Game_CS\\Program.cs",
               "RelativeToolTip": "Text-Game_CS\\Program.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAAA0AAAARAAAAAAAAAA==",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAACIAAAAnAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-03-19T00:20:26.014Z",
               "IsPinned": true,
@@ -40,13 +68,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 9,
               "Title": "Procesing.cs",
               "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\Text-Game_Cs\\Text-Game_CS\\Procesing.cs",
               "RelativeDocumentMoniker": "Text-Game_CS\\Procesing.cs",
               "ToolTip": "C:\\Users\\Admin\\source\\repos\\Text-Game_Cs\\Text-Game_CS\\Procesing.cs",
               "RelativeToolTip": "Text-Game_CS\\Procesing.cs",
-              "ViewState": "AgIAAEAAAAAAAAAAAAAqwHIAAAAjAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-03-19T00:20:22.686Z",
               "IsPinned": true,
@@ -54,13 +82,104 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Archer.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\Text-Game_Cs\\Text-Game_CS\\Archer.cs",
+              "RelativeDocumentMoniker": "Text-Game_CS\\Archer.cs",
+              "ToolTip": "C:\\Users\\Admin\\source\\repos\\Text-Game_Cs\\Text-Game_CS\\Archer.cs",
+              "RelativeToolTip": "Text-Game_CS\\Archer.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAA0AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-25T21:51:56.226Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 2,
+              "Title": "Bard.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\Text-Game_Cs\\Text-Game_CS\\Bard.cs",
+              "RelativeDocumentMoniker": "Text-Game_CS\\Bard.cs",
+              "ToolTip": "C:\\Users\\Admin\\source\\repos\\Text-Game_Cs\\Text-Game_CS\\Bard.cs",
+              "RelativeToolTip": "Text-Game_CS\\Bard.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAA3AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-25T21:51:52.503Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Dwarf.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\Text-Game_Cs\\Text-Game_CS\\Dwarf.cs",
+              "RelativeDocumentMoniker": "Text-Game_CS\\Dwarf.cs",
+              "ToolTip": "C:\\Users\\Admin\\source\\repos\\Text-Game_Cs\\Text-Game_CS\\Dwarf.cs",
+              "RelativeToolTip": "Text-Game_CS\\Dwarf.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAA2AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-25T21:51:45.588Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Jarl.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\Text-Game_Cs\\Text-Game_CS\\Jarl.cs",
+              "RelativeDocumentMoniker": "Text-Game_CS\\Jarl.cs",
+              "ToolTip": "C:\\Users\\Admin\\source\\repos\\Text-Game_Cs\\Text-Game_CS\\Jarl.cs",
+              "RelativeToolTip": "Text-Game_CS\\Jarl.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAA3AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-25T21:51:41.597Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Monster.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\Text-Game_Cs\\Text-Game_CS\\Monster.cs",
+              "RelativeDocumentMoniker": "Text-Game_CS\\Monster.cs",
+              "ToolTip": "C:\\Users\\Admin\\source\\repos\\Text-Game_Cs\\Text-Game_CS\\Monster.cs",
+              "RelativeToolTip": "Text-Game_CS\\Monster.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAA3AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-25T21:51:36.652Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Sorcerer.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\Text-Game_Cs\\Text-Game_CS\\Sorcerer.cs",
+              "RelativeDocumentMoniker": "Text-Game_CS\\Sorcerer.cs",
+              "ToolTip": "C:\\Users\\Admin\\source\\repos\\Text-Game_Cs\\Text-Game_CS\\Sorcerer.cs",
+              "RelativeToolTip": "Text-Game_CS\\Sorcerer.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAA1AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-25T21:31:31.053Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Special_attacks.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\Text-Game_Cs\\Text-Game_CS\\Special_attacks.cs",
+              "RelativeDocumentMoniker": "Text-Game_CS\\Special_attacks.cs",
+              "ToolTip": "C:\\Users\\Admin\\source\\repos\\Text-Game_Cs\\Text-Game_CS\\Special_attacks.cs",
+              "RelativeToolTip": "Text-Game_CS\\Special_attacks.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-25T21:31:30.341Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
               "Title": "Witcher.cs",
               "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\Text-Game_Cs\\Text-Game_CS\\Witcher.cs",
               "RelativeDocumentMoniker": "Text-Game_CS\\Witcher.cs",
               "ToolTip": "C:\\Users\\Admin\\source\\repos\\Text-Game_Cs\\Text-Game_CS\\Witcher.cs",
               "RelativeToolTip": "Text-Game_CS\\Witcher.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAIAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAxAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-03-22T16:49:52.77Z",
               "EditorCaption": ""

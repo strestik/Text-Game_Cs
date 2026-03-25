@@ -6,6 +6,7 @@ namespace Text_Game_CS
 {
     internal class Processing
     {
+        public static Random rand = new Random();
         public static string bookASCII = $"                .-~~~~~~~~~-._       _.-~~~~~~~~~-.\r\n            __.'              ~.   .~              `.__\r\n          .'//                  \\./                  \\\\`.\r\n        .'//                     |                     \\\\`.\r\n      .'// .-~\"\"\"\"\"\"\"~~~~-._     |     _,-~~~~\"\"\"\"\"\"\"~-. \\\\`.     Unknown\r\n    .'//.-\"                 `-.  |  .-'                 \"-.\\\\`.\r\n  .'//______.============-..   \\ | /   ..-============.______\\\\`.\r\n.'______________________________\\|/______________________________`.";
         public static void configErrorMessage(string firstMessage, string secondMessage)
         {
@@ -139,7 +140,6 @@ namespace Text_Game_CS
                             Console.ReadKey();
 
                             return witcher;
-                            break;
 
 
                         case "2":
@@ -152,7 +152,6 @@ namespace Text_Game_CS
                             Console.ReadKey();
 
                             return sorcerer;
-                            break;
 
 
                         case "3":
@@ -165,7 +164,6 @@ namespace Text_Game_CS
                             Console.ReadKey();
 
                             return archer;
-                            break;
 
 
                         case "4":
@@ -178,7 +176,6 @@ namespace Text_Game_CS
                             Console.ReadKey();
 
                             return jarl;
-                            break;
 
 
                         case "5":
@@ -191,7 +188,6 @@ namespace Text_Game_CS
                             Console.ReadKey();
 
                             return bard;
-                            break;
 
 
                         case "6":
@@ -204,7 +200,6 @@ namespace Text_Game_CS
                             Console.ReadKey();
 
                             return monster;
-                            break;
 
 
                         case "7":
@@ -217,14 +212,12 @@ namespace Text_Game_CS
                             Console.ReadKey();
 
                             return dwarf;
-                            break;
 
 
                         default:
                             configErrorMessage("Invalid choice:", " Please try again.");
                             Console.Clear();
                             continue;
-                            break;
                     }
                     break;
                 }
@@ -235,6 +228,37 @@ namespace Text_Game_CS
                 }
             }
             return null;
+        }
+
+        public static Character enemyCharacterChoosingProcess()
+        {
+            int enemyType = rand.Next(1, 8); // Generate a random number between 1 and 7
+            switch (enemyType)
+            {
+                case 1:
+                    Console.WriteLine($"Your enemy is Witcher");
+                    return new Witcher("Enemy Witcher");
+                case 2:
+                    Console.WriteLine($"Your enemy is Sorcerer");
+                    return new Sorcerer("Enemy Sorcerer");
+                case 3:
+                    Console.WriteLine($"Your enemy is Archer");
+                    return new Archer("Enemy Archer");
+                case 4:
+                    Console.WriteLine($"Your enemy is Jarl");
+                    return new Jarl("Enemy Jarl");
+                case 5:
+                    Console.WriteLine($"Your enemy is Bard");
+                    return new Bard("Enemy Bard");
+                case 6:
+                    Console.WriteLine($"Your enemy is Monster");
+                    return new Monster("Enemy Monster");
+                case 7:
+                    Console.WriteLine($"Your enemy is Dwarf");
+                    return new Dwarf("Enemy Dwarf");
+                default:
+                    throw new Exception("Invalid enemy type generated.");
+            }
         }
 
     }

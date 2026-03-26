@@ -7,6 +7,15 @@ namespace Text_Game_CS
     internal class Processing
     {
         public static Random rand = new Random();
+        private static Dictionary<string, bool> enemyShow = new Dictionary<string, bool>() 
+        {   
+            ["showHp"] = false ,
+            ["showStamina"] = false,
+            ["showMana"] = false,
+            ["showDefense"] = false,
+            ["showSkill"] = false,
+            ["showLevel"] = false
+        };
         public static string bookASCII = $"                .-~~~~~~~~~-._       _.-~~~~~~~~~-.\r\n            __.'              ~.   .~              `.__\r\n          .'//                  \\./                  \\\\`.\r\n        .'//                     |                     \\\\`.\r\n      .'// .-~\"\"\"\"\"\"\"~~~~-._     |     _,-~~~~\"\"\"\"\"\"\"~-. \\\\`.     Unknown\r\n    .'//.-\"                 `-.  |  .-'                 \"-.\\\\`.\r\n  .'//______.============-..   \\ | /   ..-============.______\\\\`.\r\n.'______________________________\\|/______________________________`.";
         public static void configErrorMessage(string firstMessage, string secondMessage)
         {
@@ -69,6 +78,30 @@ namespace Text_Game_CS
             Console.Clear();
             Console.WriteLine($"\nHero {h.Name}, of powers:");
             Console.WriteLine($"HP: {h.HP}, Stamina: {h.Stamina}, Mana: {h.Mana}, Defense: {h.Defense}, Skill: {h.Skill}, Level: {h.Level}, Experience: {h.Experience}/{h.ExperienceToNextLevel}\n");
+        }
+
+        public static void enemyInfo(Character e)  // info about enemy with propability for eatch info
+        {
+            // if ifno is not yet known, then there is 70% chance to show it, otherwise it will be shown
+            if (!enemyShow["showHp"]) enemyShow["showHp"] = rand.Next(100) > 30;
+            if (!enemyShow["showStamina"]) enemyShow["showStamina"] = rand.Next(100) > 30;
+            if (!enemyShow["showMana"]) enemyShow["showMana"] = rand.Next(100) > 30;
+            if (!enemyShow["showDefense"]) enemyShow["showDefense"] = rand.Next(100) > 30;
+            if (!enemyShow["showSkill"]) enemyShow["showSkill"] = rand.Next(100) > 30;
+            if (!enemyShow["showLevel"]) enemyShow["showLevel"] = rand.Next(100) > 30;
+
+
+            Console.Clear();
+            Console.WriteLine($"\nEnemy {e.Name}, of powers:");
+            if (enemyShow["showHp"]) Console.Write($"HP: {e.HP}, ");
+            if (enemyShow["showStamina"]) Console.Write($"Stamina: { e.Stamina}, ");
+            if (enemyShow["showMana"]) Console.Write($"Mana: { e.Mana}, ");
+            if (enemyShow["showDefense"]) Console.Write($"Defense: { e.Defense}, ");
+            if (enemyShow["showSkill"]) Console.Write($"Skill: { e.Skill}, ");
+            if (enemyShow["showLevel"]) Console.Write($"Level: { e.Level}\n");
+            Console.WriteLine($"");
+            Console.WriteLine($"Click any button to continue...");
+            Console.ReadKey();
         }
 
         public static void welcoming(Character hero)
@@ -232,7 +265,7 @@ namespace Text_Game_CS
 
         public static Character enemyCharacterChoosingProcess()
         {
-            int enemyType = rand.Next(1, 8); // Generate a random number between 1 and 7
+            int enemyType = rand.Next(1, 8);
             switch (enemyType)
             {
                 case 1:

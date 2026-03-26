@@ -17,7 +17,7 @@ namespace Text_Game_CS
                     Character Hero = characterChoosingProcess(enter());                      // Create the hero character with the provided name
 
                     Character Enemy = enemyCharacterChoosingProcess();                             // Create an enemy character for the first encounter
-
+                    
                     if (Processing.skip())
                     {
                         // // Welcoming the player and introducing the game world
@@ -27,6 +27,9 @@ namespace Text_Game_CS
                         loreDrop_0();
                     } // Text part
 
+                    // temporary print
+                    Console.WriteLine("Beware, your enemy is not so easy to read. Its posible that you dont know all, but every time gather data you know more and more. . .");
+                    enemyInfo(Enemy); // Show the enemy's information before the fight
 
                     // // Introdusing stats, abbilities and equpment , ascii art for difrent classes
 

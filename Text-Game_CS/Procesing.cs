@@ -266,29 +266,30 @@ namespace Text_Game_CS
         public static Character enemyCharacterChoosingProcess()
         {
             int enemyType = rand.Next(1, 8);
+            string enemyName = Character.enemyNames[rand.Next(22)] + " - " + Character.titles[rand.Next(94)];    
             switch (enemyType)
             {
                 case 1:
                     Console.WriteLine($"Your enemy is Witcher");
-                    return new Witcher("Enemy Witcher");
+                    return new Witcher(enemyName);
                 case 2:
                     Console.WriteLine($"Your enemy is Sorcerer");
-                    return new Sorcerer("Enemy Sorcerer");
+                    return new Sorcerer(enemyName);
                 case 3:
                     Console.WriteLine($"Your enemy is Archer");
-                    return new Archer("Enemy Archer");
+                    return new Archer(enemyName);
                 case 4:
                     Console.WriteLine($"Your enemy is Jarl");
-                    return new Jarl("Enemy Jarl");
+                    return new Jarl(enemyName);
                 case 5:
                     Console.WriteLine($"Your enemy is Bard");
-                    return new Bard("Enemy Bard");
+                    return new Bard(enemyName);
                 case 6:
                     Console.WriteLine($"Your enemy is Monster");
-                    return new Monster("Enemy Monster");
+                    return new Monster(enemyName);
                 case 7:
                     Console.WriteLine($"Your enemy is Dwarf");
-                    return new Dwarf("Enemy Dwarf");
+                    return new Dwarf(enemyName);
                 default:
                     throw new Exception("Invalid enemy type generated.");
             }

@@ -21,7 +21,7 @@ namespace Text_Game_CS
         public Dictionary<string, EquipStatus> Equip { get; protected set; }
         //public string deathASCII { get; private set; } = $"    ___o .--.\r\n   /___| |OO|\r\n  /'   |_|  |_\r\n       (_    _)\r\n       | |   \\\r\n       | |oo_/sjw\r\n";
 
-        string[] titles = new string[]
+        public static string[] titles = new string[]
         {
             "Great King",
             "the Imperishable",
@@ -119,7 +119,7 @@ namespace Text_Game_CS
         };
 
 
-        string[] enemyNames = new string[]
+        public static string[] enemyNames = new string[]
         {
             "Eredin",
             "Imlerith",
@@ -144,7 +144,7 @@ namespace Text_Game_CS
             "Settra"
         };
 
-        string[] classes = new string[]
+        public string[] classes = new string[]
         {
             "Witcher",
             "Sorcerer",

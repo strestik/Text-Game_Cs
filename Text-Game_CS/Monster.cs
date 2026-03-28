@@ -6,7 +6,7 @@ namespace Text_Game_CS
 {
     internal class Monster : Character
     {
-        public static Random rand = new Random();
+        public Random rand = new Random();
         public List<string> Abilities { get; private set; } = new List<string> { "Claw Swipe", "Roar", "Tail Whip" };  // Placeholder for Monster abilities, can be expanded with effects and mechanics later
         public Monster(string name) : base(name)
         {

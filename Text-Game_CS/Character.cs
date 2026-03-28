@@ -59,7 +59,7 @@ namespace Text_Game_CS
             };
         }
 
-        private static string[] titles = new string[]
+        private string[] titles = new string[]
         {
             "Great King",
             "the Imperishable",
@@ -155,13 +155,13 @@ namespace Text_Game_CS
             "Eternal Warden of Nehek's Lands",
             "Breaker of Djaf's Bonds"
         };
-        public static string getTitle(int pos)
+        public string getTitle(int pos)
         {
             if (pos < 0 || pos > titles.Length) return "Invalid title position";
             return titles[pos];
         }
 
-        private static string[] enemyNames = new string[]
+        private string[] enemyNames = new string[]
         {
             "Eredin",
             "Imlerith",
@@ -185,7 +185,7 @@ namespace Text_Game_CS
             "Tissaia",
             "Settra"
         };
-        public static string getEnemyName(int pos)
+        public string getEnemyName(int pos)
         {
             if (pos < 0 || pos > enemyNames.Length) return "Invalid enemy name position";
             return enemyNames[pos];
@@ -216,7 +216,7 @@ namespace Text_Game_CS
         // | static       | : |          NO             |        NO        |         NO          |
         // +--------------+---+-------------------------+------------------+---------------------+
 
-        public static void Death()
+        public void Death()
         {
             Console.WriteLine($"    ___o .--.\r\n   /___| |OO|\r\n  /'   |_|  |_\r\n       (_    _)\r\n       | |   \\\r\n       | |   /   \r\n");
             Console.WriteLine("You have died. Game over.");

@@ -6,7 +6,7 @@ namespace Text_Game_CS
 {
     internal class Archer : Character
     {
-        public static Random rand = new Random();
+        public Random rand = new Random();
         public List<string> Spells { get; private set; } = new List<string> { "Arrow Shot", "Ice Arrow", "Poison Arrow" };  // Placeholder for Archer skills, can be expanded with effects and mechanics later
         public Archer(string name) : base(name)
         {

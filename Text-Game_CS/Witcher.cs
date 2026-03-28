@@ -6,7 +6,7 @@ namespace Text_Game_CS
 {
     internal class Witcher : Character
     {
-        public static Random rand = new Random();
+        public Random rand = new Random();
         public List<string> Signs { get; private set; } = new List<string> { "Aard", "Igni", "Yrden", "Quen", "Axii" };  // Placeholder for Witcher signs, can be expanded with effects and mechanics later
         public Witcher(string name) : base(name)
         {

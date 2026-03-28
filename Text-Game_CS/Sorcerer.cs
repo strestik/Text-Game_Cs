@@ -6,7 +6,7 @@ namespace Text_Game_CS
 {
     internal class Sorcerer : Character
     {
-        public static Random rand = new Random();
+        public Random rand = new Random();
         public List<string> Spells { get; private set; } = new List<string> { "Fireball", "Ice Shard", "Lightning Bolt", "Heal", "Shield" };  // Placeholder for Sorcerer spells, can be expanded with effects and mechanics later
         public Sorcerer(string name) : base(name)
         {

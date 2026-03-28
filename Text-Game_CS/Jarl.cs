@@ -6,7 +6,7 @@ namespace Text_Game_CS
 {
     internal class Jarl : Character
     {
-        public static Random rand = new Random();
+        public Random rand = new Random();
         public List<string> Spells { get; private set; } = new List<string> { "Summon Guard", "Royal Decree", "Shield Bash" };  // Placeholder for Jarl skills, can be expanded with effects and mechanics later
         public Jarl(string name) : base(name)
         {

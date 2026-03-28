@@ -8,39 +8,40 @@ namespace Text_Game_CS
     {
         static void Main(string[] args)
         {
+            Processing p = new Processing();
             while (true)
             {
                 try
                 {
                     // // Proces of choosing character class, states specific stats and abilities of each class, and then choosing the class
 
-                    Character Hero = characterChoosingProcess(enter());                      // Create the hero character with the provided name
+                    Character Hero = p.characterChoosingProcess(p.enter());                      // Create the hero character with the provided name
 
-                    Character Enemy = enemyCharacterChoosingProcess();                             // Create an enemy character for the first encounter
+                    Character Enemy = p.enemyCharacterChoosingProcess();                             // Create an enemy character for the first encounter
                     
-                    if (Processing.skip())
+                    if (p.skip())
                     {
                         // // Welcoming the player and introducing the game world
-                        welcoming(Hero);
+                        p.welcoming(Hero);
 
                         // // Starting lore drop, first encounter and proposition of lore
-                        loreDrop_0();
+                        p.loreDrop_0();
                     } // Text part
 
                     // temporary print
                     Console.WriteLine("Beware, your enemy is not so easy to read. Its posible that you dont know all, but every time gather data you know more and more. . .");
-                    enemyInfo(Enemy); // Show the enemy's information before the fight
+                    p.enemyInfo(Enemy); // Show the enemy's information before the fight
 
                     // // Introdusing stats, abbilities and equpment , ascii art for difrent classes
 
 
-                    Character.Death();
+                    Hero.Death();
                     Thread.Sleep(2000);
                     break;
                 }
                 catch (Exception ex)
                 {
-                    configErrorMessage("Exception: ", ex.Message);
+                    p.configErrorMessage("Exception: ", ex.Message);
                     Console.Clear();
                 }
             }

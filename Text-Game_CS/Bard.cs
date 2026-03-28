@@ -6,7 +6,7 @@ namespace Text_Game_CS
 {
     internal class Bard : Character
     {
-        public static Random rand = new Random();
+        public Random rand = new Random();
         public List<string> Songs { get; private set; } = new List<string> { "Song of Valor", "Melody of Healing", "Ballad of Strength", "Harmony of Protection", "Lullaby of Sleep" };  // Placeholder for Bard songs, can be expanded with effects and mechanics later
         public Bard(string name) : base(name)
         {

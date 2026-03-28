@@ -6,8 +6,10 @@ namespace Text_Game_CS
 {
     internal class Processing
     {
-        public static Random rand = new Random();
-        private static Dictionary<string, bool> enemyShow = new Dictionary<string, bool>() 
+        Character c = new Character("Default");
+
+        public Random rand = new Random();
+        private Dictionary<string, bool> enemyShow = new Dictionary<string, bool>() 
         {   
             ["showHp"] = false ,
             ["showStamina"] = false,
@@ -16,8 +18,8 @@ namespace Text_Game_CS
             ["showSkill"] = false,
             ["showLevel"] = false
         };
-        public static string bookASCII = $"                .-~~~~~~~~~-._       _.-~~~~~~~~~-.\r\n            __.'              ~.   .~              `.__\r\n          .'//                  \\./                  \\\\`.\r\n        .'//                     |                     \\\\`.\r\n      .'// .-~\"\"\"\"\"\"\"~~~~-._     |     _,-~~~~\"\"\"\"\"\"\"~-. \\\\`.     Unknown\r\n    .'//.-\"                 `-.  |  .-'                 \"-.\\\\`.\r\n  .'//______.============-..   \\ | /   ..-============.______\\\\`.\r\n.'______________________________\\|/______________________________`.";
-        public static void configErrorMessage(string firstMessage, string secondMessage)
+        public string bookASCII = $"                .-~~~~~~~~~-._       _.-~~~~~~~~~-.\r\n            __.'              ~.   .~              `.__\r\n          .'//                  \\./                  \\\\`.\r\n        .'//                     |                     \\\\`.\r\n      .'// .-~\"\"\"\"\"\"\"~~~~-._     |     _,-~~~~\"\"\"\"\"\"\"~-. \\\\`.     Unknown\r\n    .'//.-\"                 `-.  |  .-'                 \"-.\\\\`.\r\n  .'//______.============-..   \\ | /   ..-============.______\\\\`.\r\n.'______________________________\\|/______________________________`.";
+        public void configErrorMessage(string firstMessage, string secondMessage)
         {
             Console.ForegroundColor = ConsoleColor.Yellow;      // color Yellow text
             Console.Write($"{firstMessage}");
@@ -27,7 +29,7 @@ namespace Text_Game_CS
             Thread.Sleep(2000);
         }
 
-        //public static void ApplyEffect (Character character, string effectName, int duration)
+        //public void ApplyEffect (Character character, string effectName, int duration)
         //{
         //    if (character.effects.ContainsKey(effectName))
         //    {
@@ -40,7 +42,7 @@ namespace Text_Game_CS
         //    }
         //}
 
-        public static void WriteWithDelay(string text, int charDelayMs = 50, int initialDelayMs = 0, bool endJump = true)
+        public void WriteWithDelay(string text, int charDelayMs = 50, int initialDelayMs = 0, bool endJump = true)
         {
             if (initialDelayMs > 0)
             {
@@ -58,14 +60,14 @@ namespace Text_Game_CS
             if (endJump) Console.WriteLine();
         }
 
-        public static bool skip()
+        public bool skip()
         {
             Thread.Sleep(1000);
             if (Console.KeyAvailable && Console.ReadKey(intercept: true).Key == ConsoleKey.Enter) return false;
             return true;
         }
 
-        public static string enter()
+        public string enter()
         {
             Console.WriteLine("___________________________");
             Console.Write("Enter your character's name : ");
@@ -74,14 +76,14 @@ namespace Text_Game_CS
             return input;
         }
 
-        public static void characterInfo(Character h)
+        public void characterInfo(Character h)
         {
             Console.Clear();
             Console.WriteLine($"\nHero {h.Name}, of powers:");
             Console.WriteLine($"HP: {h.HP}, Stamina: {h.Stamina}, Mana: {h.Mana}, Defense: {h.Defense}, Skill: {h.Skill}, Level: {h.Level}, Experience: {h.Experience}/{h.ExperienceToNextLevel}\n");
         }
 
-        public static void enemyInfo(Character e)  // info about enemy with propability for eatch info
+        public void enemyInfo(Character e)  // info about enemy with propability for eatch info
         {
             // if ifno is not yet known, then there is 70% chance to show it, otherwise it will be shown
             if (!enemyShow["showHp"]) enemyShow["showHp"] = rand.Next(100) > 30;
@@ -105,7 +107,7 @@ namespace Text_Game_CS
             Console.ReadKey();
         }
 
-        public static void welcoming(Character hero)
+        public void welcoming(Character hero)
         {
             if (skip())
             {
@@ -125,7 +127,7 @@ namespace Text_Game_CS
             }
         }
 
-        public static void loreDrop_0()
+        public void loreDrop_0()
         {
             // Lorem ipsum lore story
             if (skip())
@@ -141,7 +143,7 @@ namespace Text_Game_CS
             }
         }
 
-        public static Character characterChoosingProcess(string name)
+        public Character characterChoosingProcess(string name)
         {
             while (true)
             {
@@ -264,10 +266,10 @@ namespace Text_Game_CS
             return null;
         }
 
-        public static Character enemyCharacterChoosingProcess()
+        public Character enemyCharacterChoosingProcess()
         {
             int enemyType = rand.Next(1, 8);
-            string enemyName = Character.getEnemyName(rand.Next(22)) + " - " + Character.getTitle(rand.Next(94));    
+            string enemyName = c.getEnemyName(rand.Next(22)) + " - " + c.getTitle(rand.Next(94));    
             switch (enemyType)
             {
                 case 1:

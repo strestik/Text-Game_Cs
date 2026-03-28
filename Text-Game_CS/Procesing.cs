@@ -64,6 +64,7 @@ namespace Text_Game_CS
             if (Console.KeyAvailable && Console.ReadKey(intercept: true).Key == ConsoleKey.Enter) return false;
             return true;
         }
+
         public static string enter()
         {
             Console.WriteLine("___________________________");
@@ -266,7 +267,7 @@ namespace Text_Game_CS
         public static Character enemyCharacterChoosingProcess()
         {
             int enemyType = rand.Next(1, 8);
-            string enemyName = Character.enemyNames[rand.Next(22)] + " - " + Character.titles[rand.Next(94)];    
+            string enemyName = Character.getEnemyName(rand.Next(22)) + " - " + Character.getTitle(rand.Next(94));    
             switch (enemyType)
             {
                 case 1:

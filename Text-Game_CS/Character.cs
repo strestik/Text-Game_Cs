@@ -20,8 +20,46 @@ namespace Text_Game_CS
         public Dictionary<string, EffectStatus> Effects { get; protected set; }
         public Dictionary<string, EquipStatus> Equip { get; protected set; }
         //public string deathASCII { get; private set; } = $"    ___o .--.\r\n   /___| |OO|\r\n  /'   |_|  |_\r\n       (_    _)\r\n       | |   \\\r\n       | |oo_/sjw\r\n";
+        public Character(string name)
+        {
+            if (string.IsNullOrWhiteSpace(name))
+            {
+                throw new ArgumentException("Parameter must not be null, empty or whitespace.");
+            }
 
-        public static string[] titles = new string[]
+            // this.IsAlive = true;
+            this.Name = name;
+            this.HP = 100;
+            this.Stamina = 100;
+            this.Mana = 0;
+            this.Defense = 50;
+            this.Skill = 1.0;
+            this.Respect = 15;  // starting respect  15 == standart ; 0 == absolute neutral ; 50 == respected ; 100 == legendary ; -50 == hated ; -100 ==  きっしょー
+            this.Level = 1;
+            this.Experience = 0;
+            this.ExperienceToNextLevel = 100;
+            this.Effects = new Dictionary<string, EffectStatus>(StringComparer.OrdinalIgnoreCase)
+            {
+                ["burning"] = new EffectStatus(false, 0),
+                ["poisoned"] = new EffectStatus(false, 0),
+                ["stunned"] = new EffectStatus(false, 0),
+                ["frozen"] = new EffectStatus(false, 0),
+                ["bleeding"] = new EffectStatus(false, 0),
+                ["healing"] = new EffectStatus(false, 0),
+                ["stamina regen"] = new EffectStatus(false, 0),
+                ["shielding"] = new EffectStatus(false, 0),
+                ["cleanse"] = new EffectStatus(false, 0)
+            };
+            this.Equip = new Dictionary<string, EquipStatus>(StringComparer.OrdinalIgnoreCase)
+            {
+                ["bomb"] = new EquipStatus(60, true),
+                ["poison bomb"] = new EquipStatus(50, true, "poisoned"),
+                ["fire bomb"] = new EquipStatus(50, true, "burning"),
+                ["frost bomb"] = new EquipStatus(50, true, "frozen")
+            };
+        }
+
+        private static string[] titles = new string[]
         {
             "Great King",
             "the Imperishable",
@@ -117,9 +155,13 @@ namespace Text_Game_CS
             "Eternal Warden of Nehek's Lands",
             "Breaker of Djaf's Bonds"
         };
+        public static string getTitle(int pos)
+        {
+            if (pos < 0 || pos > titles.Length) return "Invalid title position";
+            return titles[pos];
+        }
 
-
-        public static string[] enemyNames = new string[]
+        private static string[] enemyNames = new string[]
         {
             "Eredin",
             "Imlerith",
@@ -143,8 +185,13 @@ namespace Text_Game_CS
             "Tissaia",
             "Settra"
         };
+        public static string getEnemyName(int pos)
+        {
+            if (pos < 0 || pos > enemyNames.Length) return "Invalid enemy name position";
+            return enemyNames[pos];
+        }
 
-        public string[] classes = new string[]
+        private string[] classes = new string[]
         {
             "Witcher",
             "Sorcerer",
@@ -154,7 +201,20 @@ namespace Text_Game_CS
             "Monster",
             "Dwarf"
         };
+        public string getClass(int pos)
+        {
+            if (pos < 0 || pos > classes.Length) return "Invalid class position";
+            return classes[pos];
+        }
 
+        // +--------------+---+-------------------------+------------------+---------------------+
+        // |  Class Type  |   | Can inherit from others | Can be inherited | Can be instantiated | 
+        // |--------------|---|-------------------------+------------------+---------------------+
+        // | normal       | : |          YES            |        YES       |         YES         |
+        // | abstract     | : |          YES            |        YES       |         NO          |
+        // | sealed       | : |          YES            |        NO        |         YES         |
+        // | static       | : |          NO             |        NO        |         NO          |
+        // +--------------+---+-------------------------+------------------+---------------------+
 
         public static void Death()
         {
@@ -218,42 +278,5 @@ namespace Text_Game_CS
         //                        "frost bomb": { "own":True,"dmg": 50, "effect": "frozen"}, 
         //                        }
 
-        public Character(string name)
-        {
-            if (string.IsNullOrWhiteSpace(name))
-            {
-                throw new ArgumentException("Parameter must not be null, empty or whitespace.");
-            }
-            // this.IsAlive = true;
-            this.Name = name;
-            this.HP = 100;
-            this.Stamina = 100;
-            this.Mana = 0;
-            this.Defense = 50;
-            this.Skill = 1.0;
-            this.Respect = 15;  // starting respect  15 == standart ; 0 == absolute neutral ; 50 == respected ; 100 == legendary ; -50 == hated ; -100 ==  きっしょー
-            this.Level = 1;
-            this.Experience = 0;
-            this.ExperienceToNextLevel = 100;
-            this.Effects = new Dictionary<string, EffectStatus>(StringComparer.OrdinalIgnoreCase)
-            {
-                ["burning"] = new EffectStatus(false, 0),
-                ["poisoned"] = new EffectStatus(false, 0),
-                ["stunned"] = new EffectStatus(false, 0),
-                ["frozen"] = new EffectStatus(false, 0),
-                ["bleeding"] = new EffectStatus(false, 0),
-                ["healing"] = new EffectStatus(false, 0),
-                ["stamina regen"] = new EffectStatus(false, 0),
-                ["shielding"] = new EffectStatus(false, 0),
-                ["cleanse"] = new EffectStatus(false, 0)
-            };
-            this.Equip = new Dictionary<string, EquipStatus>(StringComparer.OrdinalIgnoreCase)
-            {
-                ["bomb"] = new EquipStatus(60, true),
-                ["poison bomb"] = new EquipStatus(50, true, "poisoned"),
-                ["fire bomb"] = new EquipStatus(50, true, "burning"),
-                ["frost bomb"] = new EquipStatus(50, true, "frozen")
-            };
-        }
     }
 }

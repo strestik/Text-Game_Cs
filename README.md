@@ -1,3 +1,4 @@
+inspiration: NetHack, Rogue 
 ```
 Heroic story under construction.
                /\

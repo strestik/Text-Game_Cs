@@ -4,9 +4,9 @@ using System.Text;
 
 namespace Text_Game_CS
 {
-    internal class Processing
+    internal class Processing : Character
     {
-        Character c = new Character("Default");
+        Character c = new Character();
 
         public Random rand = new Random();
         private Dictionary<string, bool> enemyShow = new Dictionary<string, bool>() 
@@ -69,21 +69,15 @@ namespace Text_Game_CS
 
         public string enter()
         {
-            Console.WriteLine("___________________________");
+            //Console.WriteLine("___________________________");
             Console.Write("Enter your character's name : ");
             string input = Console.ReadLine();
             Console.WriteLine();
             return input;
         }
+        
 
-        public void characterInfo(Character h)
-        {
-            Console.Clear();
-            Console.WriteLine($"\nHero {h.Name}, of powers:");
-            Console.WriteLine($"HP: {h.HP}, Stamina: {h.Stamina}, Mana: {h.Mana}, Defense: {h.Defense}, Skill: {h.Skill}, Level: {h.Level}, Experience: {h.Experience}/{h.ExperienceToNextLevel}\n");
-        }
-
-        public void enemyInfo(Character e)  // info about enemy with propability for eatch info
+        public void enemyInfo()  // info about enemy with propability for eatch info
         {
             // if ifno is not yet known, then there is 70% chance to show it, otherwise it will be shown
             if (!enemyShow["showHp"]) enemyShow["showHp"] = rand.Next(100) > 30;
@@ -95,13 +89,13 @@ namespace Text_Game_CS
 
 
             Console.Clear();
-            Console.WriteLine($"\nEnemy {e.Name}, of powers:");
-            if (enemyShow["showHp"]) Console.Write($"HP: {e.HP}, ");
-            if (enemyShow["showStamina"]) Console.Write($"Stamina: { e.Stamina}, ");
-            if (enemyShow["showMana"]) Console.Write($"Mana: { e.Mana}, ");
-            if (enemyShow["showDefense"]) Console.Write($"Defense: { e.Defense}, ");
-            if (enemyShow["showSkill"]) Console.Write($"Skill: { e.Skill}, ");
-            if (enemyShow["showLevel"]) Console.Write($"Level: { e.Level}\n");
+            Console.WriteLine($"\nEnemy {Name}, of powers:");
+            if (enemyShow["showHp"]) Console.Write($"HP: {HP}, ");
+            if (enemyShow["showStamina"]) Console.Write($"Stamina: {Stamina}, ");
+            if (enemyShow["showMana"]) Console.Write($"Mana: {Mana}, ");
+            if (enemyShow["showDefense"]) Console.Write($"Defense: {Defense}, ");
+            if (enemyShow["showSkill"]) Console.Write($"Skill: {Skill}, ");
+            if (enemyShow["showLevel"]) Console.Write($"Level: {Level}\n");
             Console.WriteLine($"");
             Console.WriteLine($"Click any button to continue...");
             Console.ReadKey();
@@ -115,7 +109,7 @@ namespace Text_Game_CS
                 Console.Clear();
                 WriteWithDelay($"Hmmm... ", 500, 1200);
                 Console.Clear();
-                WriteWithDelay($"{hero.Name}", charDelayMs: 60, 1200);
+                WriteWithDelay($"{this.Name}", charDelayMs: 60, 1200);
                 WriteWithDelay($"Thats a great name!!!!", charDelayMs: 80, 1500);
                 Thread.Sleep(1200);
                 Console.Clear();
@@ -171,7 +165,7 @@ namespace Text_Game_CS
                             Character witcher = new Witcher(name);
                             Thread.Sleep(1500);
 
-                            characterInfo(witcher);
+                            witcher.characterInfo();
                             Console.WriteLine("\nPress any key to continue...\n");
                             Console.ReadKey();
 
@@ -183,7 +177,7 @@ namespace Text_Game_CS
                             Character sorcerer = new Sorcerer(name);
                             Thread.Sleep(1500);
 
-                            characterInfo(sorcerer);
+                            sorcerer.characterInfo();
                             Console.WriteLine("\nPress any key to continue...\n");
                             Console.ReadKey();
 
@@ -195,7 +189,7 @@ namespace Text_Game_CS
                             Character archer = new Archer(name);
                             Thread.Sleep(1500);
 
-                            characterInfo(archer);
+                            archer.characterInfo();
                             Console.WriteLine("\nPress any key to continue...\n");
                             Console.ReadKey();
 
@@ -207,7 +201,7 @@ namespace Text_Game_CS
                             Character jarl = new Jarl(name);
                             Thread.Sleep(1500);
 
-                            characterInfo(jarl);
+                            jarl.characterInfo();
                             Console.WriteLine("\nPress any key to continue...\n");
                             Console.ReadKey();
 
@@ -219,7 +213,7 @@ namespace Text_Game_CS
                             Character bard = new Bard(name);
                             Thread.Sleep(1500);
 
-                            characterInfo(bard);
+                            bard.characterInfo();
                             Console.WriteLine("\nPress any key to continue...\n");
                             Console.ReadKey();
 
@@ -231,7 +225,7 @@ namespace Text_Game_CS
                             Character monster = new Monster(name);
                             Thread.Sleep(1500);
 
-                            characterInfo(monster);
+                            monster.characterInfo();
                             Console.WriteLine("\nPress any key to continue...\n");
                             Console.ReadKey();
 
@@ -243,7 +237,7 @@ namespace Text_Game_CS
                             Character dwarf = new Dwarf(name);
                             Thread.Sleep(1500);
 
-                            characterInfo(dwarf);
+                            dwarf.characterInfo();
                             Console.WriteLine("\nPress any key to continue...\n");
                             Console.ReadKey();
 

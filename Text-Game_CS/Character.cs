@@ -6,21 +6,21 @@ namespace Text_Game_CS
 {
     internal class Character
     {
-        public string Name { get; private set; } = "Unknown";
-        public bool IsAlive { get; private set; } = true;
-        public int HP { get; protected set; }
-        public int Stamina { get; protected set; }
-        public int Mana { get; protected set; }
-        public int Defense { get; protected set; }
-        public double Skill { get; protected set; } // AttackMultiplier
-        public int Respect { get; protected set; }
-        public int Level { get; protected set; } = 1;                                // new idea of leveling system
-        public int Experience { get; protected set; } = 0;                           // new idea of leveling system
-        public int ExperienceToNextLevel { get; protected set; } = 100;              // new idea of leveling system
-        public Dictionary<string, EffectStatus> Effects { get; protected set; }
-        public Dictionary<string, EquipStatus> Equip { get; protected set; }
+        protected string Name { get; set; } = "Unknown";
+        private bool IsAlive { get; set; } = true;
+        protected int HP { get; set; }
+        protected int Stamina { get; set; }
+        protected int Mana { get; set; }
+        protected int Defense { get; set; }
+        protected double Skill { get; set; } // AttackMultiplier
+        protected int Respect { get; set; }
+        protected int Level { get; set; } = 1;                                // new idea of leveling system
+        protected int Experience { get; set; } = 0;                           // new idea of leveling system
+        protected int ExperienceToNextLevel { get; set; } = 100;              // new idea of leveling system
+        protected Dictionary<string, EffectStatus> Effects { get; set; }
+        protected Dictionary<string, EquipStatus> Equip { get; set; }
         //public string deathASCII { get; private set; } = $"    ___o .--.\r\n   /___| |OO|\r\n  /'   |_|  |_\r\n       (_    _)\r\n       | |   \\\r\n       | |oo_/sjw\r\n";
-        public Character(string name)
+        public Character(string name = "Default")
         {
             if (string.IsNullOrWhiteSpace(name))
             {
@@ -215,6 +215,13 @@ namespace Text_Game_CS
         // | sealed       | : |          YES            |        NO        |         YES         |
         // | static       | : |          NO             |        NO        |         NO          |
         // +--------------+---+-------------------------+------------------+---------------------+
+
+        public void characterInfo()
+        {
+            Console.Clear();
+            Console.WriteLine($"\nHero {this.Name}, of powers:");
+            Console.WriteLine($"HP: {this.HP}, Stamina: {this.Stamina}, Mana: {this.Mana}, Defense: {this.Defense}, Skill: {this.Skill}, Level: {this.Level}, Experience: {this.Experience}/{this.ExperienceToNextLevel}\n");
+        }
 
         public void Death()
         {

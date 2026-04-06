@@ -30,7 +30,7 @@ namespace Text_Game_CS
 
                     // temporary print
                     Console.WriteLine("Beware, your enemy is not so easy to read. Its posible that you dont know all, but every time gather data you know more and more. . .");
-                    p.enemyInfo(Enemy); // Show the enemy's information before the fight
+                    p.enemyInfo(); // Show the enemy's information before the fight
 
                     // // Introdusing stats, abbilities and equpment , ascii art for difrent classes
 
